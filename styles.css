@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --button-color: #c084fc;
+    --main-color: #e9d5ff;
+    --accent-color: #a855f7;
+    --contemporary-color: #a78bfa;
+    --icon-color: #f3e8ff;
+    --text-color: #525252;
+}
+
+body {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+img {
+    border-radius: 50%;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    border-radius: 5rem;
+    border: none;
+    background-color: var(--accent-color);
+    color: var(--icon-color);
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    width: 5rem;
+}
+/* reuseable styles */
+
+
+
+.container {
+    display: grid;
+    grid-template-columns: 22% 1fr 1fr;
+    grid-template-rows: 1fr 27rem 1fr; /* Three rows, each with equal fraction */
+    grid-template-areas:
+      "sidebar header header"
+      "sidebar content content"
+      "sidebar content content"; /* thisd defines the grid areas */
+    height: 100vh;
+}
+
+aside {
+    background-color: var(--accent-color);
+    grid-row: 1 / 6;
+    padding: 2rem;
+}
+
+aside > div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+aside .iconify {
+    color: var(--icon-color);
+    font-size: 1.3rem;
+}
+
+
+.site-name {
+    margin: -0.5rem 0 2.5rem -1rem;
+}
+
+.site-name > h1 {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-left: -0.3rem;
+}
+
+.site-name > .iconify {
+    font-size: 2.5rem;
+}
+
+aside > div >  h4 {
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 2.5;
+}
+
+aside > .communities {
+    margin-bottom: 2.5rem;
+}
+/* end of sidebar */
+
+
+.header {
+    grid-column: 2 / 6 ;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header .iconify {
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+.header-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+}
+
+.header-1 .left {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.header-1 .left > .search-input {
+    border-radius: 5rem;   
+    border: none;
+    background-color: var(--main-color);
+    padding: 0.3rem;
+    width: 40rem;
+}
+
+.right {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+
+.right > h3 {
+    color: var(--text-color);
+}
+
+.header-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem 0 3rem;
+}
+
+.header-2 .greeting {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-color);
+}
+
+.txt h3 > a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.header-2 .buttons {
+    display: flex;
+    gap: 2rem;
+}
+
+.main {
+    background-color: var(--main-color);
+    grid-column: 2 / 6;
+    grid-row: 2 / 6;
+}
